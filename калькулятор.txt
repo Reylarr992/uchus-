@@ -1,0 +1,58 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace uzhus_
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            double number1, number2;
+            string opperation;
+
+            Console.WriteLine("Введите число 1");
+            number1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Введите нужное действие (+, -, *, /)");
+            opperation = Console.ReadLine();
+            Console.WriteLine("Введите число 2");
+            number2 = double.Parse(Console.ReadLine());
+
+           
+
+            switch (opperation)
+
+            {
+                case"+":
+                    Console.WriteLine(number1 + number2);
+                    break;
+                case"-":
+                    Console.WriteLine(number1 - number2);
+                    break;
+                case"*":
+                    Console.WriteLine(number1 * number2);
+                    break;
+                case"/":
+                    Console.WriteLine(number1 / number2);
+                    if (number2 == 0) 
+                    {
+                        Console.WriteLine("Ошибка!!");
+                    }
+                    else
+                    {
+                        Console.WriteLine(number1 / number2);
+                    }
+                    break;
+                    default:
+                    Console.WriteLine("Выберите другое действие");
+                    break; 
+            }
+            Console.ReadLine();
+          
+        }
+        }
+    }
+
